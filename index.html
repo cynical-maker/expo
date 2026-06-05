@@ -313,7 +313,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="team-card">
   <div class="team-avatar">
-    <img src="stiven.png" alt="Foto de Stiven Daniel Conrado Romero">
+    <img src="stiven.jpeg" alt="Foto de Stiven Daniel Conrado Romero">
   </div>
   <div>
     <div class="team-name">Stiven Daniel Conrado Romero</div>
@@ -323,7 +323,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
       <div class="team-card">
         <div class="team-avatar">
-          <img src="erick.png" alt="Foto de Erick Junior Cantillo Hernandez"></div>
+          <img src="erick.jpeg" alt="Foto de Erick Junior Cantillo Hernandez"></div>
         <div>
           <div class="team-name">Erick Junior Cantillo Hernandez</div>
           <div class="team-role">Desarrollo</div>
@@ -331,7 +331,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
       </div>
 
       <div class="team-card">
-        <div class="team-avatar"><img src="michael.png" alt="Foto de Michael David Morales Berdugo"></div>
+        <div class="team-avatar"><img src="yo.png" alt="Foto de Michael David Morales Berdugo"></div>
         <div>
           <div class="team-name">Michael David Morales Berdugo</div>
           <div class="team-role">Investigación</div>
@@ -409,7 +409,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="callout info">
       <div class="callout-label"><i class="fas fa-lightbulb"></i> Definición formal</div>
-      <p><!-- ✏️ Escribe aquí la definición de normalización con tus propias palabras --></p>
+      <p>La normalización de bases de datos es el proceso para organizar tablas y relaciones para eliminar la redundancia de datos lo que evita errores en una actualizacion. el diccionario de datos es un documento o repositorio que contiene metadatos la cual pueden ser nombres, tablas, tipos de datos, descripciones, etc.... </p>
     </div>
 
     <!-- ════ ANOMALÍAS ════
@@ -427,17 +427,17 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="callout warn">
       <div class="callout-label"><i class="fas fa-exclamation-triangle"></i> Anomalía de Inserción</div>
-      <p><!-- ✏️ Define la anomalía de inserción y da un ejemplo propio --></p>
+      <p>Ocurre cuando no se puede registrar un nuevo juego porque todavia no existe una venta asociada, ejemplo: Call of Duty Modern Warfare IV no puede almacenarse hasta que alguien lo compre </p>
     </div>
 
     <div class="callout warn">
       <div class="callout-label"><i class="fas fa-exclamation-triangle"></i> Anomalía de Actualización</div>
-      <p><!-- ✏️ Define la anomalía de actualización y da un ejemplo propio --></p>
+      <p>Si el teléfono de Juan Pérez cambia, habría que modificarlo en todas las filas donde aparece. Si una fila no se actualiza, existirán datos inconsistentes.</p>
     </div>
 
     <div class="callout error">
       <div class="callout-label"><i class="fas fa-times-circle"></i> Anomalía de Eliminación</div>
-      <p><!-- ✏️ Define la anomalía de eliminación y da un ejemplo propio --></p>
+      <p>Si se elimina la única venta de un juego, también podría perderse toda la información relacionada con ese juego.</p>
     </div>
 
   </div>
@@ -472,11 +472,11 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="section-tag"><i class="fas fa-store"></i> Caso práctico</div>
 
     <h2 class="section-title">
-      El caso: <span style="color:var(--green)"><!-- ✏️ Nombre de su caso --></span>
+      El caso: <span style="color:var(--green)">Expert Games</span>
     </h2>
 
     <p class="section-lead">
-      <!-- ✏️ Describan el negocio: qué hace, dónde está, cuál es el problema de datos -->
+      ExpertGames Cartagena es una tienda de videojuegos que almacena clientes, juegos, categorías y plataformas en una sola tabla. Esto genera redundancia, anomalías y dificultades para mantener la información actualizada.
     </p>
 
     <div class="table-wrap">
@@ -484,12 +484,12 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
         <thead>
           <tr>
             <!-- ✏️ Define tus propias columnas. Ejemplo mínimo: 8-10 campos -->
-            <th>campo_1</th>
-            <th>campo_2</th>
-            <th>campo_3</th>
-            <th>campo_4</th>
-            <th>campo_5</th>
-            <th>campo_6</th>
+            <th>id venta</th>
+            <th>Cliente</th>
+            <th>Telefono</th>
+            <th>Juego</th>
+            <th>Categoría</th>
+            <th>Plataforma</th>
             <!-- ✏️ Agrega o elimina columnas según tu caso -->
           </tr>
         </thead>
@@ -498,11 +498,15 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
                Las celdas con múltiples valores sepáralas con coma.
                Usa style="color:var(--warn)" para resaltar los problemas 1FN
                y style="color:var(--red)" para los problemas de redundancia -->
-          <tr class="row-hint">
-            <td colspan="6">✏️ Reemplaza esta fila con tus datos reales</td>
-          </tr>
-          <tr class="row-hint">
-            <td colspan="6">✏️ Agrega al menos 4 filas de ejemplo</td>
+               <tr><td>1</td><td>Juan Pérez</td><td>3001234567</td><td>FIFA 26</td><td>Deportes</td><td style="color:var(--warn)">PS5,Xbox</td></tr>
+               <tr><td>2</td><td>Juan Pérez</td><td>3001234567</td><td>GTA VI</td><td>Acción</td><td style="color:var(--warn)">PS5,Xbox,PC</td></tr>
+               <tr><td>3</td><td>María Karros</td><td>3019876543</td><td>Minecraft</td><td>Sandbox</td><td style="color:var(--warn)">PC,Android,Xbox,PS5</td></tr>
+               <tr><td>4</td><td>Carlos Ruiz</td><td>3024567890</td><td>Valorant</td><td>Shooter</td><td style="color:var(--warn)">PC</td></tr>
+          <!-- <tr class="row-hint">
+            <td colspan="6"></td>
+          </tr> -->
+          <!-- <tr class="row-hint">
+            <td colspan="6">✏️ Agrega al menos 4 filas de ejemplo</td>-->
           </tr>
         </tbody>
       </table>
@@ -511,11 +515,11 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="grid-2" style="margin-top:1.5rem">
       <div class="callout warn">
         <div class="callout-label"><i class="fas fa-exclamation-circle"></i> Problema 1FN detectado</div>
-        <p><!-- ✏️ Describe qué campos violan la 1FN en tu tabla y por qué --></p>
+        <p>La tabla viola la Primera Forma Normal (1FN) porque el campo "Plataforma" almacena múltiples valores dentro de una misma celda, por ejemplo: "PS5, Xbox, PC". Esto impide que cada atributo sea atómico y dificulta las consultas, actualizaciones y búsquedas. Para cumplir la 1FN, cada plataforma debe almacenarse en un registro independiente.</p>
       </div>
       <div class="callout error">
         <div class="callout-label"><i class="fas fa-times-circle"></i> Problema 2FN / 3FN detectado</div>
-        <p><!-- ✏️ Describe qué datos se repiten y qué dependencias incorrectas hay --></p>
+        <p>Existen datos repetidos de clientes y videojuegos en varias filas. Por ejemplo, el nombre y teléfono de Juan Pérez aparecen cada vez que realiza una compra. Además, la categoría depende del juego y no directamente de la venta, generando una dependencia transitiva. Esto provoca redundancia de información, inconsistencias al actualizar datos y posibles anomalías de inserción, actualización y eliminación.</p>
       </div>
     </div>
 
@@ -542,13 +546,13 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="section-tag"><i class="fas fa-sitemap"></i> Proceso</div>
     <h2 class="section-title">Formas Normales</h2>
     <p class="section-lead">
-      <!-- ✏️ Escribe una frase que presente el proceso de normalización de su caso -->
+      A continuación se muestra el proceso de normalización aplicado a la base de datos de ExpertGames Cartagena, transformando una tabla con redundancia y dependencias incorrectas en un modelo organizado en Tercera Forma Normal (3FN).
     </p>
 
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="showTab('fn1', this)">1FN — Primera</button>
-      <button class="tab-btn" onclick="showTab('fn2', this)">2FN — Segunda</button>
-      <button class="tab-btn" onclick="showTab('fn3', this)">3FN — Tercera</button>
+      <button class="tab-btn active" onclick="showTab('fn1', this)">1FN</button>
+      <button class="tab-btn" onclick="showTab('fn2', this)">2FN</button>
+      <button class="tab-btn" onclick="showTab('fn3', this)">3FN</button>
     </div>
 
 
@@ -567,14 +571,13 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
       <div class="fn-header">
         <div class="fn-number">1°</div>
         <div class="fn-info">
-          <div class="fn-title"><!-- ✏️ Primera Forma Normal --></div>
+          <div class="fn-title">Primera Forma Normal (1FN)</div>
           <div class="fn-rule">
             <i class="fas fa-check-circle"></i>
-            <!-- ✏️ Escribe la regla de la 1FN en una línea -->
+            Todos los atributos deben contener valores atómicos y no pueden existir grupos repetitivos
           </div>
           <p style="color:var(--text-2); font-size:.95rem">
-            <!-- ✏️ Explica con tus propias palabras qué es la 1FN
-                     y qué problema resuelve en su caso -->
+            La Primera Forma Normal busca que cada campo almacene un único valor. En nuestro caso, el atributo plataformas almacenaba varios valores en una misma celda, lo que dificultaba la gestión de la información.
           </p>
         </div>
       </div>
@@ -583,26 +586,23 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <div class="step-title"><!-- ✏️ Título del paso 1 --></div>
-            <p><!-- ✏️ Descripción del paso 1 aplicado a su caso --></p>
+            <div class="step-title">Identificar atributos no atomicos</div>
+            <p>Se encontró que la columna plataformas contenía múltiples valores separados por comas.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <div class="step-title"><!-- ✏️ Título del paso 2 --></div>
-            <p><!-- ✏️ Descripción del paso 2 aplicado a su caso --></p>
+            <div class="step-title">Separar los valores repetidos</div>
+            <p>Cada plataforma se registró en una fila independiente para que cada campo contenga un único dato.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
-            <div class="step-title"><!-- ✏️ Título del paso 3 --></div>
-            <p><!-- ✏️ Descripción del paso 3 aplicado a su caso --></p>
+            <div class="step-title">Verificar la atomicidad de los datos</div>
+            <p>Se comprobó que todas las columnas almacenaran únicamente un valor por registro.</p>
           </div>
-        </div>
-        <!-- ✏️ Agrega más pasos si tu caso los necesita -->
-      </div>
 
       <div class="table-wrap">
         <table>
@@ -610,25 +610,32 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
             <tr>
               <!-- ✏️ Escribe los encabezados de tu tabla en 1FN.
                        Recuerda: la PK es compuesta, márcala con * -->
-              <th>campo_pk_1 *</th>
-              <th>campo_pk_2 *</th>
-              <th>campo_3</th>
-              <th>campo_4</th>
+              <th>id_venta</th>
+              <th>plataforma</th>
+              <th>cliente</th>
+              <th>juego</th>
             </tr>
           </thead>
           <tbody>
-            <!-- ✏️ Llena con los datos de tu caso ya en 1FN.
-                     Usa class="pk" en las celdas de clave primaria -->
-            <tr class="row-hint">
-              <td colspan="4">✏️ Llena esta tabla con los datos de tu caso en 1FN</td>
-            </tr>
+             <tr><td>1</td><td>PS5</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
+             <tr><td>1</td><td>Xbox</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
+             <tr><td>2</td><td>PS5</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+             <tr><td>2</td><td>Xbox</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+             <tr><td>2</td><td>PC</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+             <tr><td>3</td><td>PC</td><td>María Karros</td><td>Minecraft</td></tr>
+             <tr><td>3</td><td>Android</td><td>María Karros</td><td>Minecraft</td></tr>
+             <tr><td>3</td><th>Xbox</th><th>María Karros</th><th>Minecraft</th></tr>
+             <tr><th>3</th><th>PS5</th><th>María Karros</th><th>Minecraft</th></tr>
+             <tr><th>4</th><th>PC</th><th>Carlos Ruiz</th><th>Valorant</th></tr>
           </tbody>
         </table>
       </div>
 
       <div class="callout info">
         <div class="callout-label"><i class="fas fa-check"></i> Resultado 1FN</div>
-        <p><!-- ✏️ Concluye: ¿qué lograron con la 1FN? ¿qué problema queda pendiente? --></p>
+        <p>Se eliminaron los valores múltiples dentro de una misma celda.
+        <p>La tabla cumple la Primera Forma Normal,</p> 
+        </p>aunque aún existen datos repetidos de cliente y juego.</p>
       </div>
     </div>
 
