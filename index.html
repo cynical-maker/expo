@@ -624,9 +624,9 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
              <tr><td>2</td><td>PC</td><td>Juan Pérez</td><td>GTA VI</td></tr>
              <tr><td>3</td><td>PC</td><td>María Karros</td><td>Minecraft</td></tr>
              <tr><td>3</td><td>Android</td><td>María Karros</td><td>Minecraft</td></tr>
-             <tr><td>3</td><th>Xbox</th><th>María Karros</th><th>Minecraft</th></tr>
-             <tr><th>3</th><th>PS5</th><th>María Karros</th><th>Minecraft</th></tr>
-             <tr><th>4</th><th>PC</th><th>Carlos Ruiz</th><th>Valorant</th></tr>
+             <tr><td>3</td><td>Xbox</td><td>María Karros</td><td>Minecraft</td></tr>
+             <tr><td>3</td><td>PS5</td><td>María Karros</td><td>Minecraft</td></tr>
+             <tr><td>4</td><td>PC</td><td>Carlos Ruiz</td><td>Valorant</td></tr>
           </tbody>
         </table>
       </div>
@@ -654,10 +654,10 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
       <div class="fn-header">
         <div class="fn-number">2°</div>
         <div class="fn-info">
-          <div class="fn-title"><!-- ✏️ Segunda Forma Normal --></div>
+          <div class="fn-title">Segunda Forma Normal </div>
           <div class="fn-rule">
             <i class="fas fa-check-circle"></i>
-            <!-- ✏️ Escribe la regla de la 2FN en una línea -->
+
           </div>
           <p style="color:var(--text-2); font-size:.95rem">
             <!-- ✏️ Explica con tus propias palabras qué es la 2FN -->
@@ -854,7 +854,11 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="callout info">
       <div class="callout-label"><i class="fas fa-lightbulb"></i> Definición</div>
-      <p><!-- ✏️ Escribe la definición formal de diccionario de datos --></p>
+      <p>Un "diccionario de datos" es un documento o repositorio que centraliza los metadatos de un sistema de información; 
+        es decir, define detalladamente la estructura, el significado, el tipo de dato, las restricciones y las relaciones de cada 
+        elemento en una base de datos. Su propósito principal es actuar como un manual de referencia compartido que garantiza la 
+        consistencia de la información, facilita el mantenimiento del sistema y 
+        asegura que tanto desarrolladores como analistas entiendan exactamente qué significa cada dato.</p>
     </div>
 
 
@@ -863,7 +867,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="dict-section" style="margin-top:2.5rem">
       <div class="dict-table-title">
         <i class="fas fa-table" style="margin-right:.4rem"></i>
-        <!-- ✏️ NOMBRE_TABLA -->
+        PRODUCTO
       </div>
       <div class="table-wrap">
         <table>
@@ -875,8 +879,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
             </tr>
           </thead>
           <tbody>
-            <!-- ✏️ Una fila por cada campo de esta tabla.
-                     Ejemplo de fila completa:
+            
             <tr>
               <td class="code">id_producto</td>
               <td class="code">VARCHAR</td>
@@ -887,9 +890,33 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
               <td>—</td>
               <td>Código único del producto</td>
             </tr>
-            -->
+
+
+            <tr>
+              <td class="code">nombre_Producto</td>
+              <td class="code">VARCHAR</td>
+              <td>80</td>
+              <td><span class="badge badge-no">NO</span></td>
+              <td></span>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>nombre del producto</td>
+            </tr>
+
+
+            <tr>
+              <td class="code">precio</td>
+              <td class="code">numeric</td>
+              <td>—</td>
+              <td><span class="badge badge-no">NO</span></td>
+              <td>—</td>
+              <td>—</td>
+              <td>0$</td>
+              <td>valor monetario del producto</td>
+            </tr>
+            
             <tr class="row-hint">
-              <td colspan="8">✏️ Reemplaza con los campos de tu primera tabla</td>
+              <td colspan="8"><!--✏️ Reemplaza con los campos de tu primera tabla</td>-->
             </tr>
           </tbody>
         </table>
@@ -900,7 +927,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="dict-section">
       <div class="dict-table-title">
         <i class="fas fa-table" style="margin-right:.4rem"></i>
-        <!-- ✏️ NOMBRE_TABLA_2 -->
+        CLIENTE
       </div>
       <div class="table-wrap">
         <table>
@@ -913,7 +940,30 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
           </thead>
           <tbody>
             <tr class="row-hint">
-              <td colspan="8">✏️ Reemplaza con los campos de tu segunda tabla</td>
+              <td colspan="8">
+            <tr>
+              <td class="code">id_Cliente</td>
+              <td class="code">VARCHAR</td>
+              <td>—</td>
+              <td><span class="badge badge-no">NO</span></td>
+             <td><span class="badge badge-pk">PK</span></td>
+              <td>—</td>
+              <td>—</td>
+              <td>codigo unico del cliente</td>
+            </tr></td>
+
+              <tr>
+              <td class="code">nombre_Cliente</td>
+              <td class="code">VARCHAR</td>
+              <td>80</td>
+              <td><span class="badge badge-no">NO</span></td>
+              <td></span>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>nombre del cliente</td>
+            </tr>
+
+
             </tr>
           </tbody>
         </table>
@@ -948,29 +998,33 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="reflection-card">
       <div class="reflection-text">
-        <p><!-- ✏️ Párrafo 1: ¿Qué aprendieron sobre normalización? --></p>
-        <br>
-        <p><!-- ✏️ Párrafo 2: ¿Qué fue lo más difícil del proceso? --></p>
-        <br>
-        <p><!-- ✏️ Párrafo 3: ¿Cómo aplicarían esto en un proyecto real de software? --></p>
+        <p>En resumen, aprendimos que la normalización es clave para ordenar una base de datos en tablas lógicas, evitando repetir datos y
+           previniendo errores al modificarlos para que el sistema sea eficiente. Lo más difícil fue pasar la teoría a la práctica, sobre todo al 
+           descifrar las dependencias funcionales y decidir cómo dividir las tablas (como en la 3FN) sin romper las reglas de negocio. Finalmente,
+            para aplicarlo en un proyecto real, lo ideal es diseñar un buen modelo entidad-relación desde el principio, lo que facilita
+           la programación del backend (CRUD, consultas, ORM) y asegura que el software pueda crecer sin volverse lento ni inestable.</p>
       </div>
     </div>
 
     <div class="grid-3" style="margin-top:2rem">
       <div class="card">
         <div class="card-icon"><i class="fas fa-star"></i></div>
-        <div class="card-title"><!-- ✏️ Lección del integrante 1 --></div>
-        <p><!-- ✏️ En máximo 2 oraciones: la lección más importante --></p>
+        <div class="card-title">Lección de Stiven</div>
+        <p>La normalización es indispensable para estructurar bases de datos eficientes, lógicas y libres de
+           datos duplicados. Dominar este proceso garantiza 
+          que el sistema no genere errores raros ni colapse cuando la información empiece a crecer.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-star"></i></div>
-        <div class="card-title"><!-- ✏️ Lección del integrante 2 --></div>
-        <p><!-- ✏️ En máximo 2 oraciones: la lección más importante --></p>
+        <div class="card-title">Lección de erick </div>
+        <p>Diseñar una base de datos sólida requiere conectar la teoría con las reglas reales del negocio antes de tirar código. Aunque separar 
+          las tablas de forma lógica (como en la 3FN) sea un reto mental, es lo que evita dolores de cabeza al programar.</p>
       </div>
       <div class="card">
         <div class="card-icon"><i class="fas fa-star"></i></div>
-        <div class="card-title"><!-- ✏️ Lección del integrante 3 --></div>
-        <p><!-- ✏️ En máximo 2 oraciones: la lección más importante --></p>
+        <div class="card-title">Lección de michael</div>
+        <p>Una estructura limpia y normalizada es el verdadero motor de un backend estable, rápido y fácil de mantener.
+           Hacer este trabajo desde el principio facilita la creación de consultas SQL y permite que el proyecto sea escalable a futuro.</p>
       </div>
     </div>
 
@@ -1000,18 +1054,17 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
       <li>
         <i class="fas fa-book"></i>
-        <!-- ✏️ Referencia 1 en formato APA -->
+       Elmasri, R., & Navathe, S. B. (2016). Fundamentos de sistemas de bases de datos (7ª ed.). Pearson Educación.
       </li>
 
       <li>
         <i class="fas fa-book"></i>
-        <!-- ✏️ Referencia 2 en formato APA -->
+        Date, C. J. (2004). Introducción a los sistemas de bases de datos (8ª ed.). Pearson Educación.
       </li>
 
       <li>
         <i class="fas fa-globe"></i>
-        <!-- ✏️ Referencia web (incluye URL y fecha de consulta) -->
-      </li>
+        Silberschatz, A., Korth, H. F., & Sudarshan, S. (2014). Fundamentos de bases de datos (6ª ed.). McGraw-Hill.
 
       <!-- ✏️ Agrega más <li> según las fuentes que usaron -->
 
@@ -1028,7 +1081,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 <footer>
   <p>
     <span class="sena-tag">SENA</span> · Centro de Comercio y Servicios · Regional Bolívar<br>
-    <!-- ✏️ Tecnología en ADSO · Ficha XXXXXX · Año -->
+    Tecnología en ADSO · Ficha 3220489 · Año 2026
   </p>
 </footer>
 
