@@ -19,7 +19,7 @@
   -->
 
   <!-- ✏️ Cambia esto: título que aparece en la pestaña del navegador -->
-  <title>--Cartelera <3--</title>
+  <title>Mi Cartelera BD — SENA ADSO</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -68,10 +68,16 @@
   --code-bg: #050508;
 }
 
+
+
+
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.75; }
 ::selection { background: var(--neon-pink); color: #fff; text-shadow: none; }
+
+
 
 #progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--neon-cyan), var(--accent)); z-index: 9999; transition: width .1s; box-shadow: 0 0 10px var(--neon-cyan); }
 
@@ -220,7 +226,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 <nav id="navbar">
   <a class="nav-logo" href="#hero">
     <!-- ✏️ Nombre corto -->
-    Acadex
+    Mi Proyecto
     <span>Bases de Datos</span>
   </a>
   <div class="nav-links">
@@ -546,7 +552,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <div class="section-tag"><i class="fas fa-sitemap"></i> Proceso</div>
     <h2 class="section-title">Formas Normales</h2>
     <p class="section-lead">
-      A continuación se muestra el proceso de normalización aplicado a la base de datos de ExpertGames Cartagena, transformando una tabla con redundancia y dependencias incorrectas en un modelo organizado en Tercera Forma Normal (3FN).
+      A continuación se muestra el proceso de normalización aplicado a la base de datos de ExpertGames Cartagena, transformando una tabla con redundancia en un modelo organizado en Tercera Forma Normal (3FN).
     </p>
 
     <div class="tabs-nav">
@@ -555,265 +561,212 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
       <button class="tab-btn" onclick="showTab('fn3', this)">3FN</button>
     </div>
 
-
-    <!-- ──────────── TAB: PRIMERA FORMA NORMAL ────────────
-    QUÉ VA AQUÍ:
-    ✏️  fn-title  → "Primera Forma Normal"
-    ✏️  fn-rule   → La regla de la 1FN en una línea
-    ✏️  párrafo   → Explicación de qué es la 1FN
-    ✏️  steps     → Los pasos concretos que siguieron
-                    para aplicar la 1FN a SU caso
-    ✏️  tabla     → La tabla resultante después de 1FN
-                    (con los encabezados y datos de su caso)
-    ✏️  callout   → Conclusión: ¿quedó en 1FN? ¿qué sigue?
-    ─────────────────────────────────────────────────────── -->
     <div id="fn1" class="tab-panel active">
       <div class="fn-header">
         <div class="fn-number">1°</div>
         <div class="fn-info">
           <div class="fn-title">Primera Forma Normal (1FN)</div>
-          <div class="fn-rule">
-            <i class="fas fa-check-circle"></i>
-            Todos los atributos deben contener valores atómicos y no pueden existir grupos repetitivos
-          </div>
-          <p style="color:var(--text-2); font-size:.95rem">
-            La Primera Forma Normal busca que cada campo almacene un único valor. En nuestro caso, el atributo plataformas almacenaba varios valores en una misma celda, lo que dificultaba la gestión de la información.
-          </p>
+          <div class="fn-rule"><i class="fas fa-check-circle"></i> Todos los atributos deben contener valores atómicos y no pueden existir grupos repetitivos</div>
+          <p style="color:var(--text-2); font-size:.95rem">La Primera Forma Normal busca que cada campo almacene un único valor. En nuestro caso, el atributo plataformas almacenaba varios valores en una misma celda.</p>
         </div>
       </div>
-
       <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Identificar atributos no atomicos</div>
-            <p>Se encontró que la columna plataformas contenía múltiples valores separados por comas.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Separar los valores repetidos</div>
-            <p>Cada plataforma se registró en una fila independiente para que cada campo contenga un único dato.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Verificar la atomicidad de los datos</div>
-            <p>Se comprobó que todas las columnas almacenaran únicamente un valor por registro.</p>
-          </div>
-
+        <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Identificar atributos no atómicos</div><p>Se encontró que la columna plataformas contenía múltiples valores separados por comas.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Separar los valores repetidos</div><p>Cada plataforma se registró en una fila independiente para que cada campo contenga un único dato.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Verificar la atomicidad de los datos</div><p>Se comprobó que todas las columnas almacenaran únicamente un valor por registro.</p></div></div>
+      </div>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <!-- ✏️ Escribe los encabezados de tu tabla en 1FN.
-                       Recuerda: la PK es compuesta, márcala con * -->
-              <th>id_venta</th>
-              <th>plataforma</th>
-              <th>cliente</th>
-              <th>juego</th>
-            </tr>
-          </thead>
+          <thead><tr><th>id_venta</th><th>plataforma</th><th>cliente</th><th>juego</th></tr></thead>
           <tbody>
-             <tr><td>1</td><td>PS5</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
-             <tr><td>1</td><td>Xbox</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
-             <tr><td>2</td><td>PS5</td><td>Juan Pérez</td><td>GTA VI</td></tr>
-             <tr><td>2</td><td>Xbox</td><td>Juan Pérez</td><td>GTA VI</td></tr>
-             <tr><td>2</td><td>PC</td><td>Juan Pérez</td><td>GTA VI</td></tr>
-             <tr><td>3</td><td>PC</td><td>María Karros</td><td>Minecraft</td></tr>
-             <tr><td>3</td><td>Android</td><td>María Karros</td><td>Minecraft</td></tr>
-             <tr><td>3</td><td>Xbox</td><td>María Karros</td><td>Minecraft</td></tr>
-             <tr><td>3</td><td>PS5</td><td>María Karros</td><td>Minecraft</td></tr>
-             <tr><td>4</td><td>PC</td><td>Carlos Ruiz</td><td>Valorant</td></tr>
+            <tr><td>1</td><td>PS5</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
+            <tr><td>1</td><td>Xbox</td><td>Juan Pérez</td><td>FIFA 26</td></tr>
+            <tr><td>2</td><td>PS5</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+            <tr><td>2</td><td>Xbox</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+            <tr><td>2</td><td>PC</td><td>Juan Pérez</td><td>GTA VI</td></tr>
+            <tr><td>3</td><td>PC</td><td>María Karros</td><td>Minecraft</td></tr>
+            <tr><td>3</td><td>Android</td><td>María Karros</td><td>Minecraft</td></tr>
+            <tr><td>3</td><td>Xbox</td><td>María Karros</td><td>Minecraft</td></tr>
+            <tr><td>3</td><td>PS5</td><td>María Karros</td><td>Minecraft</td></tr>
+            <tr><td>4</td><td>PC</td><td>Carlos Ruiz</td><td>Valorant</td></tr>
           </tbody>
         </table>
       </div>
-
       <div class="callout info">
         <div class="callout-label"><i class="fas fa-check"></i> Resultado 1FN</div>
-        <p>Se eliminaron los valores múltiples dentro de una misma celda.
-        <p>La tabla cumple la Primera Forma Normal,</p> 
-        </p>aunque aún existen datos repetidos de cliente y juego.</p>
+        <p>Se eliminaron los valores múltiples dentro de una misma celda. La tabla cumple la Primera Forma Normal, aunque aún existen datos repetidos de cliente y juego.</p>
       </div>
     </div>
 
-
-    <!-- ──────────── TAB: SEGUNDA FORMA NORMAL ────────────
-    QUÉ VA AQUÍ:
-    ✏️  fn-rule   → La regla de la 2FN en una línea
-    ✏️  párrafo   → Qué es la 2FN y qué resuelve
-    ✏️  callout warn → Las dependencias parciales que
-                       encontraron en su tabla 1FN
-    ✏️  tablas    → Las tablas resultantes (grid-2 o grid-3).
-                    Una tabla por cada entidad separada.
-                    Incluye los datos de su caso.
-    ─────────────────────────────────────────────────────── -->
     <div id="fn2" class="tab-panel">
       <div class="fn-header">
         <div class="fn-number">2°</div>
         <div class="fn-info">
-          <div class="fn-title">Segunda Forma Normal </div>
-          <div class="fn-rule">
-            <i class="fas fa-check-circle"></i>
-
-          </div>
-          <p style="color:var(--text-2); font-size:.95rem">
-            <!-- ✏️ Explica con tus propias palabras qué es la 2FN -->
-          </p>
+          <div class="fn-title">Segunda Forma Normal (2FN)</div>
+          <div class="fn-rule"><i class="fas fa-check-circle"></i> Todos los atributos deben depender completamente de la clave primaria</div>
+          <p style="color:var(--text-2); font-size:.95rem">La 2FN exige que ningún atributo dependa parcialmente de la clave. Se separan las entidades en tablas independientes.</p>
         </div>
       </div>
-
       <div class="callout warn">
-        <div class="callout-label"><i class="fas fa-search"></i> Dependencias parciales en su tabla</div>
+        <div class="callout-label"><i class="fas fa-search"></i> Dependencias parciales en la tabla</div>
         <p>
-          <!-- ✏️ Enumera las dependencias parciales que encontraron.
-                   Ejemplo de formato:
-                   nombre_cliente depende solo de nit_cliente, no de cod_producto. -->
+          — nombre_cliente depende solo de id_cliente, no de id_venta.<br>
+          — telefono depende solo de id_cliente, no de id_venta.<br>
+          — nombre_juego depende solo de id_juego, no de id_venta.<br>
+          — categoria depende solo de id_juego, no de id_venta.
         </p>
       </div>
-
-      <!-- ✏️ Crea una <div> por cada tabla resultante de la 2FN.
-               Usa la clase dict-table-title para el nombre de la tabla.
-               Agrega tantas tablas como entidades separaste. -->
       <div class="grid-2" style="margin-top:2rem; gap:1.5rem">
-
         <div>
-          <div class="dict-table-title"><!-- ✏️ NOMBRE_TABLA_1 --></div>
+          <div class="dict-table-title">CLIENTES</div>
           <div class="table-wrap">
             <table>
-              <thead>
-                <tr>
-                  <!-- ✏️ Encabezados de la tabla 1 -->
-                  <th>campo_pk</th><th>campo_2</th>
-                </tr>
-              </thead>
+              <thead><tr><th>id_cliente (PK)</th><th>nombre</th><th>telefono</th></tr></thead>
               <tbody>
-                <tr class="row-hint"><td colspan="2">✏️ Llena con datos de tu caso</td></tr>
+                <tr><td class="pk">C001</td><td>Juan Pérez</td><td>3001234567</td></tr>
+                <tr><td class="pk">C002</td><td>María Karros</td><td>3019876543</td></tr>
+                <tr><td class="pk">C003</td><td>Carlos Ruiz</td><td>3024567890</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-
         <div>
-          <div class="dict-table-title"><!-- ✏️ NOMBRE_TABLA_2 --></div>
+          <div class="dict-table-title">JUEGOS</div>
           <div class="table-wrap">
             <table>
-              <thead>
-                <tr>
-                  <!-- ✏️ Encabezados de la tabla 2 -->
-                  <th>campo_pk</th><th>campo_2</th>
-                </tr>
-              </thead>
+              <thead><tr><th>id_juego (PK)</th><th>nombre</th><th>categoria</th></tr></thead>
               <tbody>
-                <tr class="row-hint"><td colspan="2">✏️ Llena con datos de tu caso</td></tr>
+                <tr><td class="pk">J001</td><td>FIFA 26</td><td>Deportes</td></tr>
+                <tr><td class="pk">J002</td><td>GTA VI</td><td>Acción</td></tr>
+                <tr><td class="pk">J003</td><td>Minecraft</td><td>Sandbox</td></tr>
+                <tr><td class="pk">J004</td><td>Valorant</td><td>Shooter</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        <!-- ✏️ Duplica estos bloques para más tablas -->
-
+        <div>
+          <div class="dict-table-title">VENTAS</div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>id_venta (PK)</th><th>id_cliente (FK)</th><th>id_juego (FK)</th></tr></thead>
+              <tbody>
+                <tr><td class="pk">1</td><td class="fk">C001</td><td class="fk">J001</td></tr>
+                <tr><td class="pk">2</td><td class="fk">C001</td><td class="fk">J002</td></tr>
+                <tr><td class="pk">3</td><td class="fk">C002</td><td class="fk">J003</td></tr>
+                <tr><td class="pk">4</td><td class="fk">C003</td><td class="fk">J004</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="dict-table-title">VENTA_PLATAFORMAS</div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>id_venta (FK)</th><th>plataforma</th></tr></thead>
+              <tbody>
+                <tr><td class="fk">1</td><td>PS5</td></tr>
+                <tr><td class="fk">1</td><td>Xbox</td></tr>
+                <tr><td class="fk">2</td><td>PS5</td></tr>
+                <tr><td class="fk">2</td><td>PC</td></tr>
+                <tr><td class="fk">3</td><td>PC</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
 
-
-    <!-- ──────────── TAB: TERCERA FORMA NORMAL ────────────
-    QUÉ VA AQUÍ:
-    ✏️  fn-rule   → La regla de la 3FN en una línea
-    ✏️  párrafo   → Qué es la 3FN y qué resuelve
-    ✏️  callout warn → La dependencia TRANSITIVA que
-                       encontraron en alguna tabla 2FN
-    ✏️  tablas    → Las tablas finales del modelo 3FN
-    ✏️  sql-block → El CREATE TABLE de TODAS sus tablas
-                    escritas en SQL para PostgreSQL
-    ─────────────────────────────────────────────────────── -->
     <div id="fn3" class="tab-panel">
       <div class="fn-header">
         <div class="fn-number">3°</div>
         <div class="fn-info">
-          <div class="fn-title"><!-- ✏️ Tercera Forma Normal --></div>
-          <div class="fn-rule">
-            <i class="fas fa-check-circle"></i>
-            <!-- ✏️ Escribe la regla de la 3FN en una línea -->
-          </div>
-          <p style="color:var(--text-2); font-size:.95rem">
-            <!-- ✏️ Explica con tus propias palabras qué es la 3FN -->
-          </p>
+          <div class="fn-title">Tercera Forma Normal (3FN)</div>
+          <div class="fn-rule"><i class="fas fa-check-circle"></i> No deben existir dependencias transitivas entre atributos no clave</div>
+          <p style="color:var(--text-2); font-size:.95rem">La 3FN elimina dependencias transitivas: atributos que dependen de otros atributos no clave. Se separa la categoría del juego en su propia tabla.</p>
         </div>
       </div>
-
       <div class="callout warn">
         <div class="callout-label"><i class="fas fa-search"></i> Dependencia transitiva detectada</div>
         <p>
-          <!-- ✏️ Describe la cadena de dependencia transitiva que encontraron.
-                   Ejemplo de formato:
-                   En la tabla VENDEDORES:
-                   id_vendedor → cargo → salario_base
-                   (el salario depende del cargo, no del vendedor directamente) -->
+          En la tabla JUEGOS:<br>
+          id_juego → id_categoria → nombre_categoria<br>
+          (nombre_categoria depende de id_categoria, no directamente del juego)
         </p>
       </div>
-
       <div class="grid-2" style="margin-top:2rem; gap:1.5rem">
-        <!-- ✏️ Pon aquí las tablas del modelo final 3FN -->
         <div>
-          <div class="dict-table-title"><!-- ✏️ TABLA NUEVA (resultado de separar la transitiva) --></div>
+          <div class="dict-table-title">CATEGORIAS (tabla nueva)</div>
           <div class="table-wrap">
             <table>
-              <thead>
-                <tr><th>campo_pk</th><th>campo_2</th></tr>
-              </thead>
+              <thead><tr><th>id_categoria (PK)</th><th>nombre</th></tr></thead>
               <tbody>
-                <tr class="row-hint"><td colspan="2">✏️ Datos de la tabla nueva</td></tr>
+                <tr><td class="pk">CAT1</td><td>Deportes</td></tr>
+                <tr><td class="pk">CAT2</td><td>Acción</td></tr>
+                <tr><td class="pk">CAT3</td><td>Sandbox</td></tr>
+                <tr><td class="pk">CAT4</td><td>Shooter</td></tr>
               </tbody>
             </table>
           </div>
         </div>
         <div>
-          <div class="dict-table-title"><!-- ✏️ TABLA ACTUALIZADA (la que se modificó) --></div>
+          <div class="dict-table-title">JUEGOS (actualizada)</div>
           <div class="table-wrap">
             <table>
-              <thead>
-                <tr><th>campo_pk</th><th>campo_2</th><th>campo_fk (FK)</th></tr>
-              </thead>
+              <thead><tr><th>id_juego (PK)</th><th>nombre</th><th>id_categoria (FK)</th></tr></thead>
               <tbody>
-                <tr class="row-hint"><td colspan="3">✏️ Datos de la tabla actualizada</td></tr>
+                <tr><td class="pk">J001</td><td>FIFA 26</td><td class="fk">CAT1</td></tr>
+                <tr><td class="pk">J002</td><td>GTA VI</td><td class="fk">CAT2</td></tr>
+                <tr><td class="pk">J003</td><td>Minecraft</td><td class="fk">CAT3</td></tr>
+                <tr><td class="pk">J004</td><td>Valorant</td><td class="fk">CAT4</td></tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
 
-      <!-- ✏️ BLOQUE SQL:
-               Escribe aquí el CREATE TABLE de TODAS las tablas
-               de tu modelo final en PostgreSQL.
-               Respeta el orden: primero las tablas sin FK,
-               luego las que las referencian. -->
       <div class="sql-block" style="margin-top:2rem">
         <div class="sql-header">
           <div class="sql-label">PostgreSQL · Modelo Final 3FN</div>
           <div class="sql-dots"><span></span><span></span><span></span></div>
         </div>
         <pre>
-<span class="cm">-- ✏️ Escribe aquí el SQL de tu modelo completo</span>
-<span class="cm">-- Ejemplo de estructura:</span>
+<span class="cm">-- Modelo final ExpertGames en 3FN</span>
 
-<span class="kw">CREATE TABLE</span> <span class="tb">nombre_tabla</span> (
-  campo_pk    <span class="ty">VARCHAR(10)</span>    <span class="cn">PRIMARY KEY</span>,
-  campo_2     <span class="ty">VARCHAR(100)</span>   <span class="cn">NOT NULL</span>,
-  campo_fk    <span class="ty">VARCHAR(10)</span>    <span class="cn">REFERENCES</span> <span class="tb">otra_tabla</span>(campo_pk)
+<span class="kw">CREATE TABLE</span> <span class="tb">CATEGORIAS</span> (
+  id_categoria  <span class="ty">VARCHAR(10)</span>    <span class="cn">PRIMARY KEY</span>,
+  nombre        <span class="ty">VARCHAR(50)</span>    <span class="cn">NOT NULL</span>
 );
 
-<span class="cm">-- ✏️ Continúa con las demás tablas...</span>
+<span class="kw">CREATE TABLE</span> <span class="tb">CLIENTES</span> (
+  id_cliente    <span class="ty">VARCHAR(10)</span>    <span class="cn">PRIMARY KEY</span>,
+  nombre        <span class="ty">VARCHAR(100)</span>   <span class="cn">NOT NULL</span>,
+  telefono      <span class="ty">VARCHAR(15)</span>    <span class="cn">NOT NULL</span>
+);
+
+<span class="kw">CREATE TABLE</span> <span class="tb">JUEGOS</span> (
+  id_juego      <span class="ty">VARCHAR(10)</span>    <span class="cn">PRIMARY KEY</span>,
+  nombre        <span class="ty">VARCHAR(100)</span>   <span class="cn">NOT NULL</span>,
+  id_categoria  <span class="ty">VARCHAR(10)</span>    <span class="cn">REFERENCES</span> <span class="tb">CATEGORIAS</span>(id_categoria)
+);
+
+<span class="kw">CREATE TABLE</span> <span class="tb">VENTAS</span> (
+  id_venta      <span class="ty">SERIAL</span>         <span class="cn">PRIMARY KEY</span>,
+  id_cliente    <span class="ty">VARCHAR(10)</span>    <span class="cn">REFERENCES</span> <span class="tb">CLIENTES</span>(id_cliente),
+  id_juego      <span class="ty">VARCHAR(10)</span>    <span class="cn">REFERENCES</span> <span class="tb">JUEGOS</span>(id_juego),
+  fecha         <span class="ty">DATE</span>           <span class="cn">DEFAULT</span> CURRENT_DATE
+);
+
+<span class="kw">CREATE TABLE</span> <span class="tb">VENTA_PLATAFORMAS</span> (
+  id_venta      <span class="ty">INT</span>            <span class="cn">REFERENCES</span> <span class="tb">VENTAS</span>(id_venta),
+  plataforma    <span class="ty">VARCHAR(30)</span>    <span class="cn">NOT NULL</span>,
+  <span class="cn">PRIMARY KEY</span>  (id_venta, plataforma)
+);
         </pre>
       </div>
+    </div>
 
-    </div><!-- fin fn3 -->
-
-  </div><!-- fin reveal -->
+  </div>
 </section>
-
 
 <!-- ════════════════════════════════════════════════════
      SECCIÓN 6 — DICCIONARIO DE DATOS
