@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="totoro.png" type="image/png">
 
   <!--
   ╔══════════════════════════════════════════════════════════════════════╗
@@ -16,11 +15,10 @@
   ║  2. Nunca borren las etiquetas HTML, solo editen el TEXTO dentro.   ║
   ║  3. Usen Live Server en VS Code para previsualizar en tiempo real.  ║
   ║  4. Al terminar, súbanlo a GitHub Pages (Settings → Pages).        ║
-  ╚══════════════════════════════════════════════════════════════════════╝
-  -->
+  ╚══════════════════════════════════════════════════════════════════════╝-->
 
   <!-- ✏️ Cambia esto: título que aparece en la pestaña del navegador -->
-  <title>--Cartelera <3--</title>
+  <title>Mi Cartelera BD — SENA ADSO</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -157,7 +155,7 @@ tbody td.code { font-family: 'JetBrains Mono', monospace; font-size: .82rem; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 .fn-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
-.fn-number { font-family: 'Syne', sans-serif; font-size: 5rem; font-weight: 800; color: rgb(0, 242, 255); line-height: 1; user-select: none; flex-shrink: 0; text-shadow: 0 0 20px rgba(0, 243, 255, 0.75); }
+.fn-number { font-family: 'Syne', sans-serif; font-size: 5rem; font-weight: 800; color: rgba(0, 243, 255, 0.08); line-height: 1; user-select: none; flex-shrink: 0; text-shadow: 0 0 20px rgba(0, 243, 255, 0.1); }
 .fn-info { flex: 1; }
 .fn-title { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: .5rem; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
 .fn-rule { display: inline-flex; align-items: center; gap: .5rem; background: rgba(0, 243, 255, 0.08); border: 1px solid var(--neon-cyan-dim); border-radius: 6px; padding: .4rem .9rem; font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--neon-cyan); margin-bottom: 1rem; box-shadow: 0 0 8px rgba(0, 243, 255, 0.15); }
@@ -227,7 +225,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 <nav id="navbar">
   <a class="nav-logo" href="#hero">
     <!-- ✏️ Nombre corto -->
-    Acadex
+    Mi Proyecto
     <span>Bases de Datos</span>
   </a>
   <div class="nav-links">
@@ -263,7 +261,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="hero-badge">
       <i class="fas fa-database"></i>
-       SENA · Ficha 3230489 · Exposición
+       SENA · Ficha 228118 · Regional Bolívar
     </div>
 
     <h1 class="hero-title">
@@ -294,6 +292,7 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
   </div>
   <div class="scroll-hint"><i class="fas fa-chevron-down"></i> scroll</div>
 </div>
+
 
 
 <!-- ════════════════════════════════════════════════════
@@ -379,7 +378,11 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     <h2 class="section-title">¿Por qué normalizar?</h2>
 
     <p class="section-lead">
-    Se debe normalizar para eliminar la duplicación de información y asegurar la consistencia de los datos en el sistema. Al separar la información en tablas lógicas interconectadas mediante claves foráneas, se evita el riesgo de dejar datos contradictorios al actualizar o borrar registros, se ahorra espacio en el disco duro y se garantiza que la base de datos sea segura, ordenada y fácil de mantener a largo plazo.
+      La normalización de bases de datos es el proceso arquitectónico fundamental que transforma 
+       volumen caótico de información en una estructura lógica, eficiente y altamente escalable.
+        Al aplicar un conjunto de reglas de diseño secuenciales, esta técnica no solo elimina la duplicación innecesaria de los datos,
+         sino que blinda el sistema contra inconsistencias y errores de actualización, sentando los cimientos técnicos indispensables para 
+         que cualquier aplicación moderna opere de manera segura y confiable.
     </p>
 
     <div class="grid-3">
@@ -414,6 +417,8 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
       <div class="callout-label"><i class="fas fa-lightbulb"></i> Definición formal</div>
       <p>La normalización de bases de datos es el proceso para organizar tablas y relaciones para eliminar la redundancia de datos lo que evita errores en una actualizacion. el diccionario de datos es un documento o repositorio que contiene metadatos la cual pueden ser nombres, tablas, tipos de datos, descripciones, etc.... </p>
     </div>
+
+  
 
     <!-- ════ ANOMALÍAS ════
     QUÉ VA AQUÍ: Los tres tipos de anomalías que ocurren
@@ -804,8 +809,11 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
 
     <div class="callout info">
       <div class="callout-label"><i class="fas fa-lightbulb"></i> Definición</div>
-      <p>El diccionario de datos es la guía técnica de referencia de la base de datos: documenta cada tabla, campo, 
-        tipo de dato y restricción, permitiendo que cualquier desarrollador entienda la estructura sin necesidad de revisar el código fuente.</p>
+      <p>Un "diccionario de datos" es un documento o repositorio que centraliza los metadatos de un sistema de información; 
+        es decir, define detalladamente la estructura, el significado, el tipo de dato, las restricciones y las relaciones de cada 
+        elemento en una base de datos. Su propósito principal es actuar como un manual de referencia compartido que garantiza la 
+        consistencia de la información, facilita el mantenimiento del sistema y 
+        asegura que tanto desarrolladores como analistas entiendan exactamente qué significa cada dato.</p>
     </div>
 
 
@@ -1019,6 +1027,325 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
   </div>
 </section>
 
+<style>
+    /* ... Todos tus estilos anteriores ... */
+    
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .nav-links { display: none; } section { padding: 3.5rem 1.25rem; } } 
+
+
+    /* ─────────────── PEGA EL NUEVO CÓDIGO AQUÍ ─────────────── */
+
+    /* 1. Modificación para el zoom de las tarjetas */
+    .card {
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+    .card:hover { 
+      border-color: var(--neon-cyan); 
+      transform: translateY(-5px) scale(1.04); /* Aplica el Zoom */
+      box-shadow: 0 12px 25px rgba(0, 243, 255, 0.15); 
+    }
+
+    /* 2. Configuración y zoom para los bloques de alerta (Callouts) */
+    .callout { 
+      transition: transform .3s ease, box-shadow .3s ease; /* Transición suave */
+    }
+    .callout:hover {
+      transform: scale(1.02); /* Aplica un zoom sutil */
+    }
+    /* Efecto de brillo neón extra al pasar el cursor */
+    .callout.info:hover { box-shadow: inset 20px 0 30px -20px rgba(0, 243, 255, 0.5), 0 5px 15px rgba(0, 243, 255, 0.1); }
+    .callout.warn:hover { box-shadow: inset 20px 0 30px -20px rgba(252, 238, 10, 0.5), 0 5px 15px rgba(252, 238, 10, 0.1); }
+    .callout.error:hover { box-shadow: inset 20px 0 30px -20px rgba(255, 0, 60, 0.5), 0 5px 15px rgba(255, 0, 60, 0.1); }
+
+</style>
+
+<style>
+    /* ... Todos tus estilos cyberpunk anteriores (body, nav, hero, etc.) ... */
+    
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .nav-links { display: none; } section { padding: 3.5rem 1.25rem; } } 
+
+
+    /* ─────────────── PEGA ESTE BLOQUE AQUÍ PARA EL ZOOM CENTRAL ─────────────── */
+
+    /* 1. Prepara la sección completa para una transición fluida */
+    #intro {
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      transform-origin: center center; /* Fuerza a que el zoom apunte al centro de la pantalla */
+      will-change: transform;
+    }
+
+    /* 2. Cuando el cursor entre a CUALQUIER tarjeta o alerta, la pantalla completa hace zoom */
+    #intro:has(.card:hover),
+    #intro:has(.callout:hover) {
+      transform: scale(1.03); /* Ajusta a 1.05 si quieres un acercamiento más agresivo */
+    }
+
+    /* 3. Ajustes para que los elementos individuales reaccionen en armonía con el zoom global */
+    .card, .callout {
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .card:hover {
+      border-color: var(--neon-cyan) !important;
+      transform: scale(1.02) !important; /* Un pequeño contra-zoom para resaltar la tarjeta */
+      box-shadow: 0 0 30px rgba(0, 243, 255, 0.25) !important;
+      position: relative;
+      z-index: 10; /* La pone por encima del resto */
+    }
+
+    .callout:hover {
+      transform: scale(1.01) !important;
+      position: relative;
+      z-index: 10;
+    }
+
+</style>
+
+<style>
+    /* ... Todos tus estilos anteriores ... */
+
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .nav-links { display: none; } section { padding: 3.5rem 1.25rem; } } 
+
+
+    /* ─────────────── PEGA AQUÍ EL CÓDIGO CSS ─────────────── */
+    .cyber-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 8, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .cyber-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .card {
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      cursor: pointer;
+    }
+    .card.is-open {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.15) !important;
+      width: 90%;
+      max-width: 550px;
+      z-index: 9999;
+      box-shadow: 0 0 50px rgba(0, 243, 255, 0.35), inset 0 0 20px rgba(0, 243, 255, 0.1);
+      border-color: var(--neon-cyan) !important;
+      background: var(--card);
+    }
+    /* ──────────────────────────────────────────────────────── */
+
+</style>
+
+<style>
+    /* ... Todos tus estilos cyberpunk anteriores ... */
+
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .nav-links { display: none; } section { padding: 3.5rem 1.25rem; } } 
+
+
+    /* ─────────────── REEMPLAZA EL PASO 1 ANTERIOR POR ESTE BLOQUE ─────────────── */
+
+    /* 1. Capa intermedia que oscurece y aplica el borroso a lo que está ATRÁS */
+    .cyber-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 8, 0.75); /* Fondo oscuro translúcido */
+      backdrop-filter: blur(12px);     /* Filtro de desenfoque */
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 9998;                   /* Capa por debajo de la tarjeta abierta */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Activa la capa al hacer clic */
+    .cyber-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* 2. Tarjeta en estado normal */
+    .card {
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                  box-shadow 0.4s ease, border-color 0.4s ease, background-color 0.3s;
+      cursor: pointer;
+      position: relative; 
+      z-index: 1;
+    }
+
+    /* 3. La tarjeta cuando vuela al centro (Se mantiene 100% visible y nítida) */
+    .card.is-open {
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) scale(1.15) !important; /* Centrado absoluto exacto */
+      width: 90%;
+      max-width: 550px;
+      
+      /* ESTO HACE QUE SÍ SE VEA Y QUEDE AL FRENTE DE LO BORROSO: */
+      z-index: 9999 !important;        /* Fuerza a la tarjeta a estar POR ENCIMA de lo borroso */
+      background: #12131c !important;  /* Fondo sólido para que no se trasluzca lo de atrás */
+      opacity: 1 !important;           /* Evita transparencias */
+      filter: none !important;         /* Bloquea el desenfoque en sí misma */
+      
+      /* Estética Cyberpunk */
+      border-color: var(--neon-cyan) !important;
+      box-shadow: 0 0 40px rgba(0, 243, 255, 0.3), 
+                  0 0 100px rgba(0, 0, 0, 0.8) !important;
+    }
+    /* ───────────────────────────────────────────────────────────────────────────── */
+
+</style>
+
+<div class="cyber-overlay" id="cyberOverlay"></div>
+
+    <div class="cyber-cursor-dot"></div>
+    <div class="cyber-cursor-outline"></div>
+
+
+    <style>
+      @media (min-width: 769px) {
+        html, body, a, button, .tab-btn, .card {
+          cursor: none !important; /* Oculta el cursor de flecha blanca clásico */
+        }
+        .cyber-cursor-dot {
+          width: 6px;
+          height: 6px;
+          background-color: var(--neon-cyan);
+          box-shadow: 0 0 10px var(--neon-cyan);
+          position: fixed;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          z-index: 10000;
+          pointer-events: none;
+        }
+        .cyber-cursor-outline {
+          width: 26px;
+          height: 26px;
+          border: 1px solid var(--neon-cyan-dim);
+          position: fixed;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          z-index: 9999;
+          pointer-events: none;
+          transition: width 0.25s, height 0.25s, border-color 0.25s, background-color 0.25s;
+        }
+        .cyber-cursor-dot.hovered {
+          background-color: var(--neon-pink);
+          box-shadow: 0 0 10px var(--neon-pink);
+        }
+        .cyber-cursor-outline.hovered {
+          width: 36px;
+          height: 36px;
+          border-color: var(--neon-pink);
+          border-style: dashed;
+          background-color: rgba(255, 0, 60, 0.05);
+        }
+      }
+      @media (max-width: 768px) {
+        .cyber-cursor-dot, .cyber-cursor-outline { display: none !important; }
+      }
+    </style>
+
+
+    <div class="cyber-overlay" id="cyberOverlay"></div>
+
+    <div class="cyber-cursor-dot"></div>
+
+
+    <style>
+      @media (min-width: 769px) {
+        html, body, a, button, .tab-btn, .card {
+          cursor: none !important; /* Oculta la flecha clásica de Windows/Mac */
+        }
+        .cyber-cursor-dot {
+          width: 8px; /* Lo hice ligeramente más grande para que se note mejor solo */
+          height: 8px;
+          background-color: var(--neon-cyan);
+          box-shadow: 0 0 12px var(--neon-cyan), 0 0 4px #fff; /* Brillo neón con centro blanco */
+          position: fixed;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          z-index: 10000;
+          pointer-events: none;
+          transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+        }
+        /* Cuando pasas por encima de tarjetas o botones, el puntito cambia a rosa */
+        .cyber-cursor-dot.hovered {
+          background-color: var(--neon-pink);
+          box-shadow: 0 0 15px var(--neon-pink), 0 0 5px #fff;
+          transform: translate(-50%, -50%) scale(1.5); /* Se agranda un poco al hacer hover */
+        }
+      }
+      @media (max-width: 768px) {
+        .cyber-cursor-dot { display: none !important; }
+      }
+    </style>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // === LÓGICA DE LAS TARJETAS (Zoom al centro y fondo borroso) ===
+      const cards = document.querySelectorAll('.card');
+      const overlay = document.getElementById('cyberOverlay');
+
+      cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (card.classList.contains('is-open')) {
+            e.stopPropagation(); 
+            return;
+          }
+          card.classList.add('is-open');
+          overlay.classList.add('active');
+        });
+      });
+
+      overlay.addEventListener('click', () => {
+        const openCard = document.querySelector('.card.is-open');
+        if (openCard) openCard.classList.remove('is-open');
+        overlay.classList.remove('active');
+      });
+
+
+      // === LÓGICA DEL CURSOR (Movimiento inmediato del puntito) ===
+      const dot = document.querySelector('.cyber-cursor-dot');
+
+      window.addEventListener('mousemove', (e) => {
+        if(dot) {
+          dot.style.left = e.clientX + 'px';
+          dot.style.top = e.clientY + 'px';
+        }
+      });
+
+      // Cambia el puntito a rosa neón al pasar sobre elementos interactivos
+      const targets = document.querySelectorAll('a, button, .tab-btn, .card');
+      targets.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if(dot) dot.classList.add('hovered');
+        });
+        el.addEventListener('mouseleave', () => {
+          if(dot) dot.classList.remove('hovered');
+        });
+      });
+
+    });
+    </script>
+    
+</body>
+</html>
 
 <!-- ════════════════════════════════════════════════════
      FOOTER
@@ -1027,8 +1354,8 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
      ════════════════════════════════════════════════════ -->
 <footer>
   <p>
-    <span class="sena-tag">Creado por:</span> · Erick Cantillo · Stiven Conrado · Michael Morales <br>
-    Analisis y desarrollo de Software · Ficha 3230489 · Año 2026
+    <span class="sena-tag">SENA</span> · Centro de Comercio y Servicios · Regional Bolívar<br>
+    Tecnología en ADSO · Ficha 3220489 · Año 2026
   </p>
 </footer>
 
@@ -1065,6 +1392,5 @@ footer .sena-tag { color: var(--neon-cyan); font-family: 'JetBrains Mono', monos
     btn.classList.add('active');
   }
 </script>
-
 </body>
 </html>
